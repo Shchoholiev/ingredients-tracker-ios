@@ -18,8 +18,7 @@ struct Device : Codable, Identifiable {
 
 enum DeviceType: Int, Codable {
     case unknown = 0 // To enforce API users to set type explicitly
-    case rack4ShelfController = 1 // Controls a rack of 4 shelves
-    case accessPoint = 2
+    case productsRecognizer = 1
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -27,9 +26,7 @@ enum DeviceType: Int, Codable {
 
         switch typeValue {
         case 1:
-            self = .rack4ShelfController
-        case 2:
-            self = .accessPoint
+            self = .productsRecognizer
         default:
             self = .unknown
         }
@@ -39,10 +36,8 @@ enum DeviceType: Int, Codable {
         switch self {
         case .unknown:
             return "Unknown"
-        case .rack4ShelfController:
-            return "Controller for Rack of 4 Shelfs"
-        case .accessPoint:
-            return "Access Point"
+        case .productsRecognizer:
+            return "Products Recognizer"
         }
     }
 }
@@ -57,5 +52,4 @@ struct DeviceCreateDto: Codable {
     var name: String
     var type: DeviceType
     var guid: String
-    var accessKey: String
 }

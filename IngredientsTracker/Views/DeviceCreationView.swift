@@ -17,8 +17,7 @@ struct DeviceCreationView: View {
 
     private let deviceTypes = [
         (value: DeviceType.unknown, text: DeviceType.unknown.toString()),
-        (value: DeviceType.rack4ShelfController, text: DeviceType.rack4ShelfController.toString()),
-        (value: DeviceType.accessPoint, text: DeviceType.accessPoint.toString()),
+        (value: DeviceType.productsRecognizer, text: DeviceType.productsRecognizer.toString()),
     ]
 
     var body: some View {
@@ -77,14 +76,6 @@ struct DeviceCreationView: View {
                         Text("GUID: ").bold() + Text("\(result.guid)")
                         Spacer()
                         Button(action: { copyToClipboard(text: result.guid) }) {
-                            Image(systemName: "doc.on.doc.fill")
-                        }
-                    }
-
-                    HStack {
-                        Text("Access Key: ").bold() + Text("\(result.accessKey)")
-                        Spacer()
-                        Button(action: { copyToClipboard(text: result.accessKey) }) {
                             Image(systemName: "doc.on.doc.fill")
                         }
                     }

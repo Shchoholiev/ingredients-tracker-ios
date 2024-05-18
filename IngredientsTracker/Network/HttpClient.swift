@@ -11,7 +11,7 @@ class HttpClient: ObservableObject {
     
     static let shared = HttpClient()
     
-    private let baseUrl = URL(string: "https://smart-inventory-system.azurewebsites.net")!
+    private let baseUrl = URL(string: "https://ingredients-tracker.azurewebsites.net")!
     
     private let jwtTokensService = JwtTokensService()
     
@@ -139,6 +139,7 @@ class HttpClient: ObservableObject {
                 
                 return object
             } catch {
+                print(error)
                 return Dummy() as! TOut
             }
         } catch {

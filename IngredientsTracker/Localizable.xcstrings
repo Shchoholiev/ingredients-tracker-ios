@@ -4,6 +4,9 @@
     "%@" : {
 
     },
+    "%lld" : {
+
+    },
     "Access Key: " : {
       "extractionState" : "manual",
       "localizations" : {
@@ -22,21 +25,21 @@
       }
     },
     "Activate" : {
-        "extractionState" : "manual",
-        "localizations" : {
-          "en" : {
-            "stringUnit" : {
-              "state" : "translated",
-              "value" : "Activate"
-            }
-          },
-          "uk" : {
-            "stringUnit" : {
-              "state" : "translated",
-              "value" : "Активувати"
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activate"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активувати"
           }
         }
+      }
     },
     "Add Item" : {
       "extractionState" : "manual",
@@ -102,6 +105,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ви впевнені, що хочете видалити цей предмет?"
+          }
+        }
+      }
+    },
+    "Available" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Available"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступний"
           }
         }
       }
@@ -311,650 +331,645 @@
       }
     },
     "Enter details to create a new device" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Enter details to create a new device"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Введіть дані для створення нового пристрою"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter details to create a new device"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введіть дані для створення нового пристрою"
+          }
         }
+      }
     },
     "Group" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Group"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Група"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Group"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Група"
+          }
         }
+      }
     },
     "Group Name" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Group Name"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Назва групи"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Group Name"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва групи"
+          }
         }
+      }
     },
     "GUID: " : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "GUID: "
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "GUID: "
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GUID: "
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GUID: "
+          }
         }
+      }
     },
     "Id: " : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Id: "
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Ідентифікатор: "
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Id: "
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ідентифікатор: "
+          }
         }
+      }
     },
     "If you want to join a group provide your email or phone to the owner of the group." : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "If you want to join a group provide your email or phone to the owner of the group."
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Якщо ви хочете приєднатися до групи, надайте свою електронну адресу або телефон власнику групи."
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you want to join a group provide your email or phone to the owner of the group."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Якщо ви хочете приєднатися до групи, надайте свою електронну адресу або телефон власнику групи."
+          }
         }
+      }
     },
     "Item deleted" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Item deleted"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Предмет видалено"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item deleted"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предмет видалено"
+          }
         }
+      }
     },
     "Item Name" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Item Name"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Назва предмету"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item Name"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва предмету"
+          }
         }
+      }
     },
     "Items" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Items"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Предмети"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Items"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предмети"
+          }
         }
+      }
     },
     "Light Status: %@" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Light Status: %@"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Статус світла: %@"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light Status: %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статус світла: %@"
+          }
         }
+      }
     },
     "Login" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Login"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Вхід"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вхід"
+          }
         }
+      }
     },
     "Logout" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Logout"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Вихід"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logout"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вихід"
+          }
         }
+      }
     },
     "Manage users" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Manage users"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Керування користувачами"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage users"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Керування користувачами"
+          }
         }
+      }
     },
     "Name" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Name"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Ім'я"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ім'я"
+          }
         }
+      }
     },
     "No devices" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "No devices"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Немає пристроїв"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No devices"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає пристроїв"
+          }
         }
+      }
     },
     "No items" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "No items"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Немає предметів"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No items"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає предметів"
+          }
         }
+      }
+    },
+    "No products" : {
+
     },
     "No shelves" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "No shelves"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Немає полиць"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No shelves"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає полиць"
+          }
         }
+      }
     },
     "Optional comment" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Optional comment"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Необов'язковий коментар"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optional comment"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Необов'язковий коментар"
+          }
         }
+      }
     },
     "Password" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Password"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Пароль"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль"
+          }
         }
+      }
     },
     "Phone" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Phone"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Телефон"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Телефон"
+          }
         }
+      }
+    },
+    "Products" : {
+
     },
     "Profile" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Profile"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Профіль"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль"
+          }
         }
+      }
     },
     "Put Back" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Put Back"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Повернути назад"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put Back"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повернути назад"
+          }
         }
+      }
     },
     "Register" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Register"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Реєстрація"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Register"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Реєстрація"
+          }
         }
+      }
     },
     "Role Name" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Role Name"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Назва ролі"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Role Name"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва ролі"
+          }
         }
+      }
     },
     "Save" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Save"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Зберегти"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зберегти"
+          }
         }
+      }
     },
     "Search for items" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Search for items"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Пошук предметів"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search for items"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пошук предметів"
+          }
         }
+      }
+    },
+    "Search for products" : {
+
     },
     "Search Items" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Search Items"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Пошук предметів"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Items"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пошук предметів"
+          }
         }
+      }
+    },
+    "Search products" : {
+
     },
     "Shelves" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Shelves"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Полиці"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shelves"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полиці"
+          }
         }
+      }
     },
     "Take Item" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Take Item"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Взяти предмет"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Item"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Взяти предмет"
+          }
         }
-    },
-    "Turn Off Light" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Turn Off Light"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Вимкнути світло"
-                }
-            }
-        }
-    },
-    "Turn On Light" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Turn On Light"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Увімкнути світло"
-                }
-            }
-        }
-    },
-    "User" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "User"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Користувач"
-                }
-            }
-        }
-    },
-    "User Profile" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "User Profile"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Профіль користувача"
-                }
-            }
-        }
-    },
-    "Your Devices" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Your Devices"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Ваші пристрої"
-                }
-            }
-        }
-    },
-    "Your Group" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Your Group"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Ваша група"
-                }
-            }
-        }
-    },
-    "Your Shelves" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Your Shelves"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Ваші полиці"
-                }
-            }
-        }
+      }
     },
     "Taken" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Taken"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Забрано"
-                }
-            }
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taken"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Забрано"
+          }
         }
+      }
     },
-    "Available" : {
-        "extractionState" : "manual",
-        "localizations" : {
-            "en" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Available"
-                }
-            },
-            "uk" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Доступний"
-                }
-            }
+    "Turn Off Light" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn Off Light"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вимкнути світло"
+          }
         }
+      }
+    },
+    "Turn On Light" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On Light"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увімкнути світло"
+          }
+        }
+      }
+    },
+    "User" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Користувач"
+          }
+        }
+      }
+    },
+    "User Profile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Profile"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль користувача"
+          }
+        }
+      }
+    },
+    "Your Devices" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Devices"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваші пристрої"
+          }
+        }
+      }
+    },
+    "Your Group" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Group"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша група"
+          }
+        }
+      }
+    },
+    "Your Shelves" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Shelves"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваші полиці"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
