@@ -13,7 +13,6 @@ struct Product: Codable, Identifiable, Hashable {
     var count: Int = 0
 }
 
-struct ProductCreateDto: Codable {
-    var name: String
+struct ProductCount: Encodable {
     var count: Int
 }

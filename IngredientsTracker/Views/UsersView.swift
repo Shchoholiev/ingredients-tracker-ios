@@ -1,6 +1,6 @@
 //
 //  UsersView.swift
-//  SmartInventorySystem
+//  IngredientsTracker
 //
 //  Created by Serhii Shchoholiev on 12/8/23.
 //

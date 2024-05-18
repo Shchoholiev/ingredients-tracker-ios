@@ -1,8 +1,8 @@
 //
 //  PagedList.swift
-//  SmartInventorySystem
+//  IngredientsTracker
 //
-//  Created by Serhii Shchoholiev on 12/5/23.
+//  Created by Serhii Shchoholiev on 5/18/24.
 //
 
 import Foundation

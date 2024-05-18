@@ -19,4 +19,12 @@ class ProductsService: ServiceBase {
         
         return items
     }
+
+    func updateProductCount(productId: String, count: Int) async throws -> Product {
+        let url = "\(baseUrl)/\(productId)/count"
+        let body = ProductCount(count: count)
+        let updatedProduct: Product = try await HttpClient.shared.patchAsync(url, body)
+        
+        return updatedProduct
+    }
 }

@@ -1,8 +1,8 @@
 //
 //  DeviceCreationView.swift
-//  SmartInventorySystem
+//  IngredientsTracker
 //
-//  Created by Serhii Shchoholiev on 12/8/23.
+//  Created by Serhii Shchoholiev on 5/18/24.
 //
 
 import SwiftUI
