@@ -65,7 +65,6 @@ struct IngredientsTrackerApp: App {
                                     }
                             }
                             
-                            // Products tab
                             ProductsView()
                                 .tabItem {
                                     Image(systemName: "carrot.fill")
@@ -74,7 +73,18 @@ struct IngredientsTrackerApp: App {
                                     Text("Products")
                                 }
                             
-                            // Recipes tab
+                            NavigationStack {
+                                RecipesView()
+                                    .navigationDestination(for: Recipe.self) { recipe in
+                                        RecipeDetailsView(recipe: recipe)
+                                    }
+                            }
+                            .tabItem {
+                                Image(systemName: "fork.knife")
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(Color.blue)
+                                Text("Recipes")
+                            }
                             
                             // Additional tabs for users with 'Owner' role.
                             if globalUser.roles.contains("Owner") {

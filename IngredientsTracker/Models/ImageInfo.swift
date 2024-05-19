@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image: Decodable, Hashable {
+struct ImageInfo: Decodable, Hashable {
     var id: String = ""
     var originalPhotoGuid: String = ""
     var smallPhotoGuid: String = ""

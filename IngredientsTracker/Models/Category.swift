@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Category: Decodable, Hashable {
+    var id: String = ""
+    var name: String = ""
+}

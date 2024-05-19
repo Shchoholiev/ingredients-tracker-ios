@@ -126,6 +126,9 @@
         }
       }
     },
+    "Categories" : {
+
+    },
     "Confirm Deletion" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -142,6 +145,9 @@
           }
         }
       }
+    },
+    "Cook Recipe" : {
+
     },
     "Create Device" : {
       "extractionState" : "manual",
@@ -347,6 +353,9 @@
         }
       }
     },
+    "Error" : {
+
+    },
     "Group" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -431,6 +440,12 @@
           }
         }
       }
+    },
+    "Ingredients" : {
+
+    },
+    "Instructions" : {
+
     },
     "Item deleted" : {
       "extractionState" : "manual",
@@ -608,6 +623,9 @@
     "No products" : {
 
     },
+    "No recipes" : {
+
+    },
     "No shelves" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -624,6 +642,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "Optional comment" : {
       "extractionState" : "manual",
@@ -713,6 +734,12 @@
         }
       }
     },
+    "Recipe Details" : {
+
+    },
+    "Recipes" : {
+
+    },
     "Register" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -784,6 +811,9 @@
     "Search for products" : {
 
     },
+    "Search for recipes" : {
+
+    },
     "Search Items" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -804,6 +834,9 @@
     "Search products" : {
 
     },
+    "Search recipes" : {
+
+    },
     "Shelves" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -820,6 +853,9 @@
           }
         }
       }
+    },
+    "Success" : {
+
     },
     "Take Item" : {
       "extractionState" : "manual",
