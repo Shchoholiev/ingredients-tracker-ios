@@ -127,7 +127,14 @@
       }
     },
     "Categories" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категорії"
+          }
+        }
+      }
     },
     "Confirm Deletion" : {
       "extractionState" : "manual",
@@ -147,7 +154,14 @@
       }
     },
     "Cook Recipe" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приготувати рецепт"
+          }
+        }
+      }
     },
     "Create Device" : {
       "extractionState" : "manual",
@@ -354,7 +368,14 @@
       }
     },
     "Error" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помилка"
+          }
+        }
+      }
     },
     "Group" : {
       "extractionState" : "manual",
@@ -442,10 +463,24 @@
       }
     },
     "Ingredients" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Інгредієнти"
+          }
+        }
+      }
     },
     "Instructions" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Інструкції"
+          }
+        }
+      }
     },
     "Item deleted" : {
       "extractionState" : "manual",
@@ -584,7 +619,14 @@
       }
     },
     "New count" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нова кількість"
+          }
+        }
+      }
     },
     "No devices" : {
       "extractionState" : "manual",
@@ -621,10 +663,24 @@
       }
     },
     "No products" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає продуктів"
+          }
+        }
+      }
     },
     "No recipes" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає рецептів"
+          }
+        }
+      }
     },
     "No shelves" : {
       "extractionState" : "manual",
@@ -644,7 +700,14 @@
       }
     },
     "OK" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ок"
+          }
+        }
+      }
     },
     "Optional comment" : {
       "extractionState" : "manual",
@@ -698,7 +761,14 @@
       }
     },
     "Products" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продукти"
+          }
+        }
+      }
     },
     "Profile" : {
       "extractionState" : "manual",
@@ -735,10 +805,24 @@
       }
     },
     "Recipe Details" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деталі рецепту"
+          }
+        }
+      }
     },
     "Recipes" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рецепти"
+          }
+        }
+      }
     },
     "Register" : {
       "extractionState" : "manual",
@@ -809,10 +893,24 @@
       }
     },
     "Search for products" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шукати продукти"
+          }
+        }
+      }
     },
     "Search for recipes" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шукати рецепти"
+          }
+        }
+      }
     },
     "Search Items" : {
       "extractionState" : "manual",
@@ -832,10 +930,24 @@
       }
     },
     "Search products" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пошук продуктів"
+          }
+        }
+      }
     },
     "Search recipes" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шукати рецепти"
+          }
+        }
+      }
     },
     "Shelves" : {
       "extractionState" : "manual",
@@ -855,7 +967,14 @@
       }
     },
     "Success" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Успії"
+          }
+        }
+      }
     },
     "Take Item" : {
       "extractionState" : "manual",
