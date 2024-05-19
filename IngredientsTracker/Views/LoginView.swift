@@ -58,7 +58,11 @@ struct LoginView: View {
                 .padding(7)
             
             HStack {
-                Button(action: registerUser) {
+                Button(action: {
+                    Task {
+                        await loginUser()
+                    }
+                }) {
                     Text("Login")
                         .frame(minWidth: 0, maxWidth: 100)
                         .font(.system(size: 18, weight: .bold, design: .default))
@@ -90,19 +94,22 @@ struct LoginView: View {
         .padding(30)
     }
     
+    /// A computed property that checks if the login form is valid.
+    /// - Returns: A boolean indicating if the form is valid.
     var isFormValid: Bool {
         (!email.isEmpty || !phone.isEmpty) && !password.isEmpty
     }
 
-    func registerUser() {
+    /// Logs in the user using the provided email, phone, and password.
+    func loginUser() async {
         let loginModel = LoginModel(email, phone, password)
-        Task {
-            do {
-                _ = try await usersService.login(loginModel)
-                errorMessage = nil
-            } catch let httpError as HttpError {
-                errorMessage = httpError.message
-            }
+        do {
+            _ = try await usersService.login(loginModel)
+            errorMessage = nil
+        } catch let httpError as HttpError {
+            errorMessage = httpError.message
+        } catch {
+            errorMessage = "Something went wrong"
         }
     }
 }

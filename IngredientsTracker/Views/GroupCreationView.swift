@@ -65,7 +65,8 @@ struct GroupCreationView: View {
     var isFormValid: Bool {
         !name.isEmpty
     }
-
+    
+    /// Creates a new group using the entered name and description.
     private func createGroup() {
         let group = Group("", name, description)
 

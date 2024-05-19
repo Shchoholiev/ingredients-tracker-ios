@@ -84,11 +84,15 @@ struct UsersView: View {
         }
     }
     
+    /// Formats the roles for display by joining their names with a comma separator.
+   /// - Parameter roles: An array of Role objects.
+   /// - Returns: A string of role names separated by commas.
     private func formatRolesForDisplay(_ roles: [Role]) -> String {
         let roleNames = roles.map { $0.name }
         return roleNames.joined(separator: ", ")
     }
     
+    /// Loads the data for the view by fetching a page of users from the users service.
     private func loadData() {
         Task {
             do {

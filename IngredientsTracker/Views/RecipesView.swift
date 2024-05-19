@@ -81,6 +81,7 @@ struct RecipesView: View {
         }
     }
     
+    /// Loads the data for the view by fetching a page of recipes from the service.
     private func loadData() {
         Task {
             do {

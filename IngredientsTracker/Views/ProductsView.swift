@@ -108,6 +108,7 @@ struct ProductsView: View {
         }
     }
     
+    /// Loads the data for the view by fetching a page of products from the service.
     private func loadData() {
         Task {
             do {
@@ -122,6 +123,8 @@ struct ProductsView: View {
         }
     }
     
+    /// Updates the count of a given product by calling the service to update it.
+    /// - Parameter product: The product to update the count for.
     private func updateProductCount(_ product: Product) {
         Task {
             do {

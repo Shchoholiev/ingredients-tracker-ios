@@ -72,7 +72,11 @@ struct RegisterView: View {
                 .padding(7)
             
             HStack {
-                Button(action: registerUser) {
+                Button(action: {
+                    Task {
+                        await registerUser()
+                    }
+                }) {
                     Text("Register")
                         .frame(minWidth: 0, maxWidth: 100)
                         .font(.system(size: 18, weight: .bold, design: .default))
@@ -113,15 +117,15 @@ struct RegisterView: View {
     /// Handles the user registration process.
     /// It creates a `RegisterModel` with user inputs and calls the `register` method on `UsersService`.
     /// It also handles error messages by updating `errorMessage`.
-    func registerUser() {
+    func registerUser() async {
         let registerModel = RegisterModel(name, email, phone, password)
-        Task {
-            do {
-                _ = try await usersService.register(registerModel)
-                errorMessage = nil
-            } catch let httpError as HttpError {
-                errorMessage = httpError.message
-            }
+        do {
+            _ = try await usersService.register(registerModel)
+            errorMessage = nil
+        } catch let httpError as HttpError {
+            errorMessage = httpError.message
+        } catch {
+            errorMessage = "Something went wrong"
         }
     }
 }

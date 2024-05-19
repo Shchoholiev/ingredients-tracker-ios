@@ -7,45 +7,74 @@
 
 import Foundation
 
+/// A service class for making HTTP requests and managing user authentication.
 class HttpClient: ObservableObject {
     
+    /// The shared instance of the HttpClient class.
     static let shared = HttpClient()
     
-    private let baseUrl = URL(string: "https://ingredients-tracker.azurewebsites.net")!
+    /// The base URL for the API.
+    private let baseUrl = URL(string: Config.shared.apiUrl)!
     
+    /// A service for managing JWT tokens.
     private let jwtTokensService = JwtTokensService()
     
+    /// The access token for authorization.
     private var accessToken: String?
     
+    /// A service for managing user-related operations.
     private var usersService = UsersService()
     
+    /// A published property indicating whether the user is authenticated.
     @Published var isAuthenticated = false
     
+    /// Sends a GET request to the specified path and decodes the response.
+    /// - Parameter path: The path to send the request to.
+    /// - Returns: The decoded response of type `TOut`.
     func getAsync<TOut: Decodable>(_ path: String) async throws -> TOut {
         await self.checkAccessTokenAsync()
         return try await sendAsync(path, nil as Dummy?, .get)
     }
     
+    /// Sends a DELETE request to the specified path and decodes the response.
+    /// - Parameter path: The path to send the request to.
+    /// - Returns: The decoded response of type `TOut`.
     func deleteAsync<TOut: Decodable>(_ path: String) async throws -> TOut {
         await self.checkAccessTokenAsync()
         return try await sendAsync(path, nil as Dummy?, .delete)
     }
     
+    /// Sends a POST request with data to the specified path and decodes the response.
+    /// - Parameters:
+    ///   - path: The path to send the request to.
+    ///   - data: The data to send in the request body.
+    /// - Returns: The decoded response of type `TOut`.
     func postAsync<TIn: Encodable, TOut: Decodable>(_ path: String, _ data: TIn) async throws -> TOut {
         await self.checkAccessTokenAsync()
         return try await sendAsync(path, data, .post)
     }
     
+    /// Sends a PUT request with data to the specified path and decodes the response.
+    /// - Parameters:
+    ///   - path: The path to send the request to.
+    ///   - data: The data to send in the request body.
+    /// - Returns: The decoded response of type `TOut`.
     func putAsync<TIn: Encodable, TOut: Decodable>(_ path: String, _ data: TIn) async throws -> TOut {
         await self.checkAccessTokenAsync()
         return try await sendAsync(path, data, .put)
     }
     
+    /// Sends a PATCH request with data to the specified path and decodes the response.
+    /// - Parameters:
+    ///   - path: The path to send the request to.
+    ///   - data: The data to send in the request body.
+    /// - Returns: The decoded response of type `TOut`.
     func patchAsync<TIn: Encodable, TOut: Decodable>(_ path: String, _ data: TIn) async throws -> TOut {
         await self.checkAccessTokenAsync()
         return try await sendAsync(path, data, .patch)
     }
     
+    /// Logs out the user by clearing authentication data and tokens.
     func logout() {
         Task {
             await setAuthenticated(false)
@@ -56,25 +85,26 @@ class HttpClient: ObservableObject {
         GlobalUser.shared.clear()
     }
     
-    // TODO: move to global user
+    /// Sets the authentication state.
+    /// - Parameter value: A boolean indicating whether the user is authenticated.
     func setAuthenticated(_ value: Bool) async {
-        // UI updates must be done in main thread
         await MainActor.run {
             isAuthenticated = value
         }
     }
     
+    /// Checks if the user is authenticated by validating the access token.
     func checkAuthentication() async {
         await checkAccessTokenAsync()
         do {
-            let user: User = try await getAsync("/users/\(GlobalUser.shared.email ?? GlobalUser.shared.phone ?? "")")            
+            let user: User = try await getAsync("/users/\(GlobalUser.shared.email ?? GlobalUser.shared.phone ?? "")")
             await GlobalUser.shared.setGroupId(user.groupId)
             await setAuthenticated(true)
         } catch {
-//            print(error)
         }
     }
     
+    /// Refreshes the user's authentication by obtaining new tokens.
     func refreshUserAuthentication() async {
         let tokensModel = await getTokensAsync()
         if let tokens = tokensModel {
@@ -85,6 +115,12 @@ class HttpClient: ObservableObject {
         }
     }
     
+    /// Sends an HTTP request and decodes the response.
+    /// - Parameters:
+    ///   - path: The path to send the request to.
+    ///   - data: The data to send in the request body (optional).
+    ///   - httpMethod: The HTTP method to use for the request.
+    /// - Returns: The decoded response of type `TOut`.
     private func sendAsync<TIn: Encodable, TOut: Decodable>(_ path: String, _ data: TIn?, _ httpMethod: HttpMethod) async throws -> TOut {
         do {
             let url = URL(string: baseUrl.absoluteString + path)!
@@ -101,17 +137,9 @@ class HttpClient: ObservableObject {
                 let jsonEncoder = JSONEncoder()
                 let jsonData = try jsonEncoder.encode(inputData)
                 request.httpBody = jsonData
-                
-                let jsonDataStr = String(data: jsonData, encoding: .utf8 )
-                print("sendAsync input")
-                print(jsonDataStr)
             }
             
             let (data, response) = try await URLSession.shared.data(for: request)
-            
-            let str = String(data: data, encoding: .utf8 )
-            print("sendAsync result")
-            print(str)
             
             let decoder = JSONDecoder()
             let dateFormatter = DateFormatter()
@@ -121,22 +149,12 @@ class HttpClient: ObservableObject {
             let httpResponse = response as! HTTPURLResponse
             print(httpResponse.statusCode)
             if !(200...299).contains(httpResponse.statusCode) {
-                
                 let httpError = try decoder.decode(HttpError.self, from: data)
                 throw httpError
             }
-//            
-//            if httpMethod == .delete {
-//                return Dummy() as! TOut
-//            } else {
-//                let object = try decoder.decode(TOut.self, from: data)
-//                
-//                return object
-//            }
             
             do {
                 let object = try decoder.decode(TOut.self, from: data)
-                
                 return object
             } catch {
                 print(error)
@@ -148,6 +166,7 @@ class HttpClient: ObservableObject {
         }
     }
     
+    /// Checks the validity of the access token and refreshes it if necessary.
     private func checkAccessTokenAsync() async {
         var tokensModel: TokensModel? = nil
         if jwtTokensService.isExpired() {
@@ -167,6 +186,8 @@ class HttpClient: ObservableObject {
         }
     }
     
+    /// Retrieves the tokens from the Keychain and refreshes them if needed.
+    /// - Returns: An optional TokensModel containing the access and refresh tokens.
     private func getTokensAsync() async -> TokensModel? {
         let tokensModel = jwtTokensService.getTokensFromKeychain()
         if let tokens = tokensModel, !tokens.accessToken.isEmpty, !tokens.refreshToken.isEmpty {
@@ -176,7 +197,9 @@ class HttpClient: ObservableObject {
         return nil
     }
     
-    
+    /// Refreshes the access and refresh tokens.
+    /// - Parameter tokens: The current TokensModel containing the access and refresh tokens.
+    /// - Returns: An optional TokensModel containing the new access and refresh tokens.
     private func refreshTokens(_ tokens: TokensModel) async -> TokensModel? {
         do {
             let tokens: TokensModel = try await sendAsync("/tokens/refresh", tokens, .post)
@@ -187,6 +210,9 @@ class HttpClient: ObservableObject {
         }
     }
     
+    /// Converts a PascalCase string to camelCase.
+    /// - Parameter pascalKey: The PascalCase string.
+    /// - Returns: The camelCase string.
     private func convertPascalToCamelCase(_ pascalKey: String) -> String {
         let firstChar = pascalKey.prefix(1).lowercased()
         let otherChars = pascalKey.dropFirst()
@@ -209,6 +235,7 @@ class HttpClient: ObservableObject {
     }
 }
 
+/// An enumeration representing HTTP methods.
 enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
@@ -217,6 +244,6 @@ enum HttpMethod: String {
     case delete = "DELETE"
 }
 
-//MARK: - Used to pass empty data in sendAsync() from getAsync()
+/// A struct used to pass empty data in sendAsync() from getAsync().
 struct Dummy: Codable {
 }

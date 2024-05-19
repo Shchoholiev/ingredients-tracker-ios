@@ -46,6 +46,8 @@
 		905AF6502BF9215F00244A60 /* RecipesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF64F2BF9215F00244A60 /* RecipesService.swift */; };
 		905AF6522BF9230F00244A60 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF6512BF9230F00244A60 /* RecipesView.swift */; };
 		905AF6542BF928E300244A60 /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF6532BF928E300244A60 /* RecipeDetailsView.swift */; };
+		90F12F052BFA54D5000AF3D0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90F12F042BFA54D5000AF3D0 /* Config.plist */; };
+		90F12F072BFA556B000AF3D0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F12F062BFA556B000AF3D0 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		905AF64F2BF9215F00244A60 /* RecipesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesService.swift; sourceTree = "<group>"; };
 		905AF6512BF9230F00244A60 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		905AF6532BF928E300244A60 /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
+		90F12F042BFA54D5000AF3D0 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		90F12F062BFA556B000AF3D0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				905AF5B72BF8FFB600244A60 /* Assets.xcassets */,
 				905AF6412BF90B5600244A60 /* Localizable.xcstrings */,
 				905AF5B92BF8FFB600244A60 /* Preview Content */,
+				90F12F042BFA54D5000AF3D0 /* Config.plist */,
 			);
 			path = IngredientsTracker;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				905AF6032BF908F500244A60 /* GlobalUser.swift */,
+				90F12F062BFA556B000AF3D0 /* Config.swift */,
 			);
 			path = GlobalInstances;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F12F052BFA54D5000AF3D0 /* Config.plist in Resources */,
 				905AF5BB2BF8FFB600244A60 /* Preview Assets.xcassets in Resources */,
 				905AF5B82BF8FFB600244A60 /* Assets.xcassets in Resources */,
 				905AF6422BF90B5600244A60 /* Localizable.xcstrings in Resources */,
@@ -325,6 +332,7 @@
 				905AF6292BF908F500244A60 /* GlobalUser.swift in Sources */,
 				905AF61D2BF908F500244A60 /* GroupCreationView.swift in Sources */,
 				905AF62B2BF908F500244A60 /* HttpClient.swift in Sources */,
+				90F12F072BFA556B000AF3D0 /* Config.swift in Sources */,
 				905AF6342BF908F500244A60 /* LoginModel.swift in Sources */,
 				905AF62F2BF908F500244A60 /* DevicesService.swift in Sources */,
 				905AF6232BF908F500244A60 /* DeviceCreationView.swift in Sources */,

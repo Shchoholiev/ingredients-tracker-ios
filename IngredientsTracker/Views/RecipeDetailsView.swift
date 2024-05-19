@@ -90,12 +90,14 @@ struct RecipeDetailsView: View {
         }
     }
     
+    /// Loads an image from the given ImageInfo object.
+    /// - Parameter imageInfo: The ImageInfo object containing the URL information of the image.
     func loadImage(from imageInfo: ImageInfo) {
         guard !imageInfo.originalPhotoGuid.isEmpty else {
             return
         }
         
-        let urlString = "https://recipes.l7l2.c16.e2-2.dev/\(imageInfo.originalPhotoGuid).\(imageInfo.extension)"
+        let urlString = "\(Config.shared.imageStorageUrl)/\(imageInfo.originalPhotoGuid).\(imageInfo.extension)"
         guard let url = URL(string: urlString) else {
             return
         }
@@ -115,6 +117,7 @@ struct RecipeDetailsView: View {
         task.resume()
     }
     
+    /// Initiates the cooking process for the recipe and shows an alert upon completion or error.
     func cookRecipe() async {
         do {
             let service = RecipesService()

@@ -88,14 +88,19 @@ struct DeviceCreationView: View {
         .background(Color(UIColor.systemGroupedBackground))
     }
     
+    /// A computed property that checks if the device creation form is valid.
+    /// - Returns: A boolean indicating if the form is valid.
     var isFormValid: Bool {
         !deviceName.isEmpty && selectedDeviceType != .unknown
     }
     
+    /// Copies the given text to the clipboard.
+    /// - Parameter text: The text to copy to the clipboard.
     private func copyToClipboard(text: String) {
-            UIPasteboard.general.string = text
-        }
+        UIPasteboard.general.string = text
+    }
 
+    /// Creates a new device with the provided details.
     private func createDevice() {
         let device = Device(
             id: "",

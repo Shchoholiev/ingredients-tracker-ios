@@ -156,10 +156,13 @@ struct GroupView: View {
         }
     }
 
+    /// A computed property that checks if the group form is valid.
+    /// - Returns: A boolean indicating if the form is valid.
     var isFormValid: Bool {
         !groupName.isEmpty
     }
     
+    /// Loads the group data and its users by fetching from the groups service.
     private func loadGroupData() {
         Task {
             do {
@@ -178,6 +181,7 @@ struct GroupView: View {
         }
     }
 
+    /// Saves the group details by updating the group via the groups service.
     private func saveGroup() {
         Task {
             do {
@@ -194,6 +198,7 @@ struct GroupView: View {
         }
     }
     
+    /// Adds a user to the group by fetching the user and adding them via the groups service.
     private func addUser() {
         addUserCount += 1
         Task {
@@ -214,6 +219,8 @@ struct GroupView: View {
         }
     }
     
+    /// Deletes a user from the group by removing them via the groups service.
+    /// - Parameter user: The user to be removed from the group.
     private func deleteUser(_ user: User) {
         Task {
             do {
@@ -230,6 +237,7 @@ struct GroupView: View {
         }
     }
 
+    /// Leaves the group by calling the leave group method from the groups service.
     private func leaveGroup() {
         Task {
             do {

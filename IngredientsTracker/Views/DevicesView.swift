@@ -100,6 +100,7 @@ struct DevicesView: View {
         }
     }
     
+    /// Loads the data for the view by fetching a page of devices from the devices service.
     private func loadData() {
         Task {
             do {
@@ -114,6 +115,7 @@ struct DevicesView: View {
         }
     }
 
+    /// Activates a device using the provided newDeviceId and refreshes the device list.
     private func activateDevice() {
         Task {
             do {

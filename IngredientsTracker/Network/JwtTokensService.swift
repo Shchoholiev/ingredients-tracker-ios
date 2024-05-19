@@ -8,25 +8,33 @@
 import Foundation
 import JWTDecode
 
+/// A service class that handles storing, retrieving, and managing JWT tokens in the Keychain.
 class JwtTokensService {
     
+    /// The identifier for the access token in the Keychain.
     let accessTokenIdentifier = "accessToken"
     
+    /// The identifier for the refresh token in the Keychain.
     let refreshTokenIdentifier = "refreshToken"
     
+    /// Stores the given tokens in the Keychain and updates the global user state.
+    /// - Parameter tokens: The TokensModel containing the access and refresh tokens.
     func storeTokensInKeychain(tokens: TokensModel) {
         GlobalUser.shared.setUserFromJwt(tokens.accessToken)
         storeTokenInKeychain(accessTokenIdentifier, tokens.accessToken)
         storeTokenInKeychain(refreshTokenIdentifier, tokens.refreshToken)
     }
     
+    /// Clears the tokens from the Keychain.
     func clearTokensInKeychain() {
         removeItemFromKeychain(accessTokenIdentifier)
         removeItemFromKeychain(refreshTokenIdentifier)
     }
     
+    /// Checks if the access token is expired.
+    /// - Returns: A boolean indicating whether the token is expired.
     func isExpired() -> Bool {
-        let jwtTokens = getTokensFromKeychain();
+        let jwtTokens = getTokensFromKeychain()
         if let tokens = jwtTokens {
             do {
                 let jwt = try decode(jwt: tokens.accessToken)
@@ -42,6 +50,8 @@ class JwtTokensService {
         return true
     }
     
+    /// Gets the current date in UTC format.
+    /// - Returns: The current date in UTC.
     private func getCurrentUTCDate() -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
@@ -51,9 +61,11 @@ class JwtTokensService {
         return dateFormatter.date(from: utcDateString)!
     }
     
+    /// Retrieves the tokens from the Keychain.
+    /// - Returns: An optional TokensModel containing the access and refresh tokens.
     func getTokensFromKeychain() -> TokensModel? {
-        let accessTokenValue = self.getTokenFromKeychain(accessTokenIdentifier);
-        let refreshTokenValue = self.getTokenFromKeychain(refreshTokenIdentifier);
+        let accessTokenValue = self.getTokenFromKeychain(accessTokenIdentifier)
+        let refreshTokenValue = self.getTokenFromKeychain(refreshTokenIdentifier)
         
         if let accessToken = accessTokenValue,
            let refreshToken = refreshTokenValue {
@@ -63,6 +75,9 @@ class JwtTokensService {
         return nil
     }
     
+    /// Retrieves a token from the Keychain.
+    /// - Parameter identifier: The identifier for the token.
+    /// - Returns: An optional string containing the token value.
     private func getTokenFromKeychain(_ identifier: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -75,15 +90,18 @@ class JwtTokensService {
         let status = SecItemCopyMatching(query as CFDictionary, &result)
         
         if status == errSecSuccess,
-            let data = result as? Data,
-            let value = String(data: data, encoding: .utf8) {
-
+           let data = result as? Data,
+           let value = String(data: data, encoding: .utf8) {
             return value
         } else {
             return nil
         }
     }
     
+    /// Stores a token in the Keychain.
+    /// - Parameters:
+    ///   - identifier: The identifier for the token.
+    ///   - value: The value of the token.
     private func storeTokenInKeychain(_ identifier: String, _ value: String) {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -114,6 +132,8 @@ class JwtTokensService {
         }
     }
     
+    /// Removes a token from the Keychain.
+    /// - Parameter identifier: The identifier for the token.
     func removeItemFromKeychain(_ identifier: String) {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,

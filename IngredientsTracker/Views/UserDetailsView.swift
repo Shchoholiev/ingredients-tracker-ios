@@ -2,7 +2,7 @@
 //  UserDetailsView.swift
 //  IngredientsTracker
 //
-//  Created by Serhii Shchoholiev on 12/8/23.
+//  Created by Serhii Shchoholiev on 5/18/24.
 //
 
 import SwiftUI
@@ -120,6 +120,7 @@ struct UserDetailsView: View {
         .background(Color(UIColor.systemGroupedBackground))
     }
     
+    /// Toggles edit mode and updates user details if edit mode is being disabled.
     private func toggleEdit() {
         Task {
             do {
@@ -140,6 +141,7 @@ struct UserDetailsView: View {
         }
     }
     
+    /// Adds a role to the user.
     private func addRole() {
         Task {
             do {
@@ -154,6 +156,8 @@ struct UserDetailsView: View {
         }
     }
     
+    /// Deletes a role from the user.
+    /// - Parameter role: The role to be deleted.
     private func deleteRole(_ role: Role) {
         Task {
             do {

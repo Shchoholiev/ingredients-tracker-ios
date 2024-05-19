@@ -8,6 +8,7 @@
 import Foundation
 import JWTDecode
 
+/// A singleton class that manages the global user state and information.
 class GlobalUser: ObservableObject {
     static let shared = GlobalUser()
     
@@ -19,6 +20,8 @@ class GlobalUser: ObservableObject {
     
     @Published var groupId: String?
     
+    /// Sets user information from a JWT token.
+    /// - Parameter token: The JWT token containing user information.
     func setUserFromJwt(_ token: String) {
         do {
             let jwt = try decode(jwt: token)
@@ -45,6 +48,8 @@ class GlobalUser: ObservableObject {
         }
     }
     
+    /// Sets the group ID and updates the UserDefaults.
+    /// - Parameter value: The new group ID value.
     func setGroupId(_ value: String?) async {
         if value == nil {
             UserDefaults.standard.removeObject(forKey: "groupId")
@@ -56,6 +61,7 @@ class GlobalUser: ObservableObject {
         }
     }
     
+    /// Clears the user information and resets the group ID.
     func clear() {
         self.id = nil
         self.name = nil

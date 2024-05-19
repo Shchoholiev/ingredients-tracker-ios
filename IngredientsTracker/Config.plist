@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ImageStorageUrl</key>
+	<string>https://recipes.l7l2.c16.e2-2.dev</string>
+	<key>ApiUrl</key>
+	<string>https://ingredients-tracker.azurewebsites.net</string>
+</dict>
+</plist>
